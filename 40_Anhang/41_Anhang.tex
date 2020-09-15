@@ -1,0 +1,25 @@
+%\pagenumbering{Roman}
+%\setcounter{page}{1}
+%\lhead{Anhang \thesection}
+
+\appendix
+\renewcommand{\appendixtocname}{Anhang}
+\renewcommand{\appendixname}{Anhang}
+\renewcommand{\appendixpagename}{Anhang}
+\renewcommand*{\thesection}{Anhang \Alph{section}}
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+\addappheadtotoc
+\appendixpage
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+
+\begin{figure}[ht]
+  \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption[Bildname 1 \newline (Quelle: Google.de)]{%
+      Bildname 1 der \firma{Firma}
+      }\label{abb:Anhand1}\end{minipage}},rotate=90,center}
+	\includegraphics[width=1.3\textwidth]{40_Anhang/Folder1/Picture1.PNG}
+  \end{adjustbox}
+\end{figure}
+
+\newpage

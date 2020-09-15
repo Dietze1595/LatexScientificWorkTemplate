@@ -1,0 +1,41 @@
+% TODO Typ vor Nummer
+\renewcommand{\cfttabpresnum}{Tab. }
+\renewcommand{\cftfigpresnum}{Abb. }
+\settowidth{\cfttabnumwidth}{Abb. 10\quad}
+\settowidth{\cftfignumwidth}{Abb. 10\quad}
+
+\begin{footnotesize}
+
+% --- Abbildungsverzeichnis
+%\rhead{VERZEICHNISSE}
+\listoffigures
+\newpage
+
+% --- Tabellenverzeichnis
+\listoftables
+\newpage
+
+%% --- Listing-Verzeichnis
+%\renewcommand{\lstlistlistingname}{Listing-Verzeichnis}
+%\lstlistoflistings
+%%{\labelsep2cm\lstlistoflistings}
+%\newpage
+
+\end{footnotesize}
+
+% --- Literaturverzeichnis
+\bibliographystyle{unsrtdin}	%natdin %dinat %unsrtdin
+\bibliography{30_Verzeichnisse/biblio.bib}
+\newpage
+
+
+
+
+% ----------------------------------------------------------------------------------------------------------
+% Literatur (verwendete Literatur)
+% ----------------------------------------------------------------------------------------------------------
+%\renewcommand\refname{Literaturverzeichnis}
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+%\bibliographystyle{plain}
+%\bibliography{30_Anhang/31_Literaturverzeichnis}
+%\newpage
