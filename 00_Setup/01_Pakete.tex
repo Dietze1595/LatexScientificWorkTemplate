@@ -1,0 +1,104 @@
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{rotating}
+\usepackage{adjustbox}
+\usepackage{blindtext}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+
+%Text
+	\usepackage[utf8]{inputenc} 						%UTF-8 Encoding
+	\usepackage{microtype}								%Typographieoptimierung (erst vorm Druck einkommentieren, DAUERT SEEEEEHR LANGE)
+	\usepackage[ngerman]{babel}							%Textsprache Deutsch
+	\usepackage{amssymb}								%Zusätzliche Symbole
+	\usepackage{textgreek}								%Griechische Zeichen im Fließtext (ohne Mathemodus)
+
+%Grafiken
+	\usepackage{graphicx}								%Einbinden von Bildern
+	\usepackage{wrapfig}								%Bilder von Text umflossen
+	\usepackage{subfig}									%Mehrere Bilder in einer Abbildung
+%	\usepackage{svg}									%Einbingen von SVG-Vektorgrafiken (benötigt vollständige Installation von Inkscape!)
+	\usepackage{xcolor}									%Zusätzliche Farben
+	\usepackage{transparent}							%
+
+%Tabellen
+	\usepackage{longtable}								%Tabelle über mehrere Seiten
+	\usepackage{tabularx}								%Tabelle mit fixer Breite und variabler Spaltenbreite
+	\newcolumntype{Y}{>{\centering\arraybackslash}X}	%Neuer Spaltentyp f. TabularX: Y == zentriert X
+	\newcolumntype{R}{>{\raggedleft\arraybackslash}X} 	%Neuer Spaltentyp f. TabularX: R == rechtsbündig X
+	\usepackage{multirow}
+	\usepackage{caption}
+
+\renewcaptionname{ngerman}{\figurename}{Abb.}
+\renewcaptionname{ngerman}{\tablename}{Tab.}
+
+%Misc
+	\PassOptionsToPackage{hyphens}{url}					%URLs umbrechen an Bindestrichen
+	%\usepackage[colorlinks=true]{hyperref}				%Klickbare Links in PDF in Farbe und Bunt. 
+	\usepackage{hyperref}								%Klickbare Links in PDF (farbige Ausgabe unterdrückt, roter Kasten um Links)
+	\usepackage{pdfpages} 								%mehrseitige PDFs einbinden
+	\usepackage[printonlyused]{acronym}					%Abkürzungsverzeichnis ([printonlyused] gibt nur benutzte Abkürzungen aus)
+	\usepackage{nameref}								%Referenz auf Name (z.B. Kapitelname)
+	\usepackage{eurosym}								%€-Symbol per \EUR{%Summe%}
+	\usepackage[numbers,square]{natbib}					%Erweitertes bibtex, Nummern in eckigen Klammern
+	\usepackage{listings}								%Quellcode-Listings einfügen
+		\lstloadlanguages{Python,[Sharp]C}				%Laden der verwendeten Programmiersprachen
+	\usepackage{scrhack}
+	\usepackage[ngerman]{todonotes}						%ToDo Notizen und Liste der ToDos 
+	\usepackage{chngcntr}
+		\counterwithout{footnote}{chapter}				%Fußnoten werden global nummeriert, nicht mehr je Kapitel
+	\usepackage{appendix}								%Anhangorganisation
+%	\usepackage[open]{bookmark}							%Öffne Lesezeichen in der PDF-Anzeige
+
+
+%Textsatz
+	\clubpenalty10000									%Hurenkinder und Schusterjungen verhindern
+	\widowpenalty10000
+	\displaywidowpenalty=10000
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{floatflt}
+\usepackage{colortbl}
+\usepackage{paralist}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage[subfigure,titles]{tocloft}
+
+\makeatletter
+\def\l@lstlisting#1#2{\@dottedtocline{1}{0em}{1em}{\hspace{1,5em} Lst. #1}{#2}}
+\makeatother
+
+\input{00_Setup/02_Variablen.tex}
+
+\geometry{
+	a4paper,
+	top=\GlobalsGeometryTop,
+	left=\GlobalsGeometryLeft,
+	right=\GlobalsGeometryRight,
+	bottom=\GlobalsGeometryBottom,
+	headsep=\GlobalsGeometryHeadsep,
+	footskip=\GlobalsGeometryFootskip}
+
+\hypersetup{
+	unicode=false, pdftoolbar=true, pdfmenubar=true, pdffitwindow=false, pdfstartview={FitV},
+    pdftitle={\GlobalsSortOfName},
+    pdfauthor={\GlobalsAuthorName},
+    pdfsubject={Konzeption und Implementierung einer Schnittstelle zwischen zwei Cloud-Anbietern},
+    pdfcreator={\LaTeX\ with package \flqq hyperref\frqq},
+    pdfproducer={pdfTeX \the\pdftexversion.\pdftexrevision},
+    pdfkeywords={\GlobalsSortOfName; Hochschule Karlsruhe; Automatisierungstechnik; AXOOM; Cloud; Azure; Industrie 4.0},
+    pdfnewwindow=true}
+%    colorlinks=true,linkcolor=black,citecolor=black,filecolor=magenta,urlcolor=black	%kein roter Rahmen um Links
+    
+\pdfinfo{/CreationDate (D:20180102133321)}
+
+
+\setkomafont{caption}{\small}

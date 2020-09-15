@@ -1,0 +1,67 @@
+%-------------------------------------
+% Stichpunkte
+%
+% i: punktuell (\item ...)
+% e: nummeriert (\item ...)
+% d: fett (\item[...]) mit Beschreibung dahinter
+%-------------------------------------
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+% --- Punktuell
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+% --- Nummeriert
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+% --- Fettgeschrieben mit Beschreibung
+\newcommand{\bd}{\begin{description}}
+\newcommand{\ed}{\end{description}}
+
+
+
+%-------------------------------------
+% Sonderzeichen
+% 
+% „...“:	\gqq{...}
+%-------------------------------------
+
+\newcommand{\gqq}[1]{{\glqq}#1{\grqq}}
+
+
+
+%-------------------------------------
+% Firmen- und Marken-Namen
+% 
+% Firma [kursiv]:		\firma{...}
+% Produktname [kursiv]:	\produkt{...}
+% Marke [Kapitälchen]:	\marke{...}
+%-------------------------------------
+
+\newcommand{\firma}[1]{\textit{#1}}
+\newcommand{\produkt}[1]{\textit{#1}}
+\newcommand{\marke}[1]{\textsc{#1}}
+
+
+
+%-------------------------------------
+% Fußnote auf andere Fußnote referenziert
+%
+% \footnote{text\label{xy}}
+% \ftnref{xy}
+%-------------------------------------
+
+\newcommand\ftnref[1]{\textsuperscript{\ref{#1}}}
+
+
+
+%-------------------------------------
+% Quelle am Ende eines Kapitels
+%
+% Quelle: ... 	= 	\quelle{...}
+% Quellen: ... 	= 	\quellen{...}
+%-------------------------------------
+
+\newcommand\quelle[1]{\begin{footnotesize}\textit{Quelle: #1}\end{footnotesize}}
+\newcommand\quellen[1]{\begin{footnotesize}\textit{Quellen: #1}\end{footnotesize}}
